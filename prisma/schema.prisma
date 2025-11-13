@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Subscription {
+  id                String   @id @default(uuid())
+  cpf               String   @unique
+  planType          String   // 'superclube' ou 'clube'
+  planValue         Decimal  @db.Decimal(10, 2)
+  
+  // Dados pessoais
+  email             String
+  name              String
+  birthdate         String
+  phone             String
+  postcode          String
+  address           String
+  number            String
+  complement        String?
+  neighborhood      String
+  city              String
+  state             String
+  
+  // Dados do pagamento
+  paymentMethod     String   // 'pagarme-credit-card' ou 'pagarme-pix'
+  cardHolderName    String?
+  cardNumber        String?  // Armazenar apenas últimos 4 dígitos
+  cardExpiry        String?
+  cardCvv           String? // Não armazenar em produção!
+  
+  // Status
+  status            String   @default("pending") // pending, approved, failed
+  paymentStatus     String?  // approved, pending, failed
+  
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  
+  @@map("subscriptions")
+}
+

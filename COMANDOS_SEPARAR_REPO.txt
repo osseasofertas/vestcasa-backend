@@ -1,0 +1,53 @@
+========================================
+COMANDOS PARA CRIAR REPOSITÓRIO SEPARADO
+========================================
+
+IMPORTANTE: Você está usando o Git da pasta pai.
+Vamos criar um repositório Git SEPARADO apenas para o backend.
+
+PASSO 1: Fazer commit dos arquivos do backend (no repositório atual)
+--------------------------------------------------------
+git commit -m "Backend NestJS para Clube Vestcasa"
+
+PASSO 2: Criar repositório no GitHub
+--------------------------------------------------------
+1. Acesse: https://github.com/new
+2. Nome: vestcasa-backend
+3. Marque como PRIVADO
+4. NÃO marque README, .gitignore ou license
+5. Clique em "Create repository"
+6. COPIE A URL (exemplo: https://github.com/osseasofertas/vestcasa-backend.git)
+
+PASSO 3: Inicializar novo Git apenas na pasta backend
+--------------------------------------------------------
+cd C:\Users\Romano\Desktop\personal-projects\vestcasa\backend
+
+# Remover conexão com o Git da pasta pai (se necessário)
+# Não precisa fazer nada, vamos criar um novo .git
+
+# Inicializar novo repositório Git
+git init
+
+# Adicionar todos os arquivos do backend
+git add .
+
+# Fazer commit inicial
+git commit -m "Initial commit: Backend NestJS para Clube Vestcasa"
+
+# Adicionar remote do novo repositório
+git remote add origin https://github.com/osseasofertas/vestcasa-backend.git
+
+# Renomear branch para main
+git branch -M main
+
+# Fazer push
+git push -u origin main
+
+PASSO 4: Se pedir autenticação
+--------------------------------------------------------
+- Username: osseasofertas
+- Password: Use Personal Access Token
+  (GitHub → Settings → Developer settings → Personal access tokens)
+
+========================================
+

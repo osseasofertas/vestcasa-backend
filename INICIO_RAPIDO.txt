@@ -1,0 +1,38 @@
+╔══════════════════════════════════════════════════════════════╗
+║  🚀 INÍCIO RÁPIDO - REPOSITÓRIO BACKEND PRIVADO              ║
+╚══════════════════════════════════════════════════════════════╝
+
+1️⃣ CRIAR REPOSITÓRIO NO GITHUB
+   └─ https://github.com/new
+   └─ Nome: vestcasa-backend
+   └─ ✅ PRIVADO
+   └─ Copiar URL
+
+2️⃣ EXECUTAR NO POWERSHELL (pasta backend):
+   
+   git init
+   git add .
+   git commit -m "Initial commit: Backend NestJS"
+   git remote add origin https://github.com/osseasofertas/vestcasa-backend.git
+   git branch -M main
+   git push -u origin main
+
+3️⃣ SE PEDIR LOGIN:
+   └─ Username: osseasofertas
+   └─ Password: Personal Access Token
+   └─ Criar token: https://github.com/settings/tokens
+   └─ Marcar apenas: repo
+
+4️⃣ VERIFICAR:
+   └─ https://github.com/osseasofertas/vestcasa-backend
+   └─ Deve estar PRIVADO ✅
+
+5️⃣ CONECTAR NA RAILWAY:
+   └─ https://railway.app
+   └─ New Project → GitHub repo
+   └─ Selecionar: vestcasa-backend
+
+╔══════════════════════════════════════════════════════════════╗
+║  ✅ PRONTO! Backend separado e privado no GitHub            ║
+╚══════════════════════════════════════════════════════════════╝
+

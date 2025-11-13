@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: vestcasa_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: vestcasa_user
+      POSTGRES_PASSWORD: vestcasa_password
+      POSTGRES_DB: vestcasa_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - vestcasa_network
+
+volumes:
+  postgres_data:
+
+networks:
+  vestcasa_network:
+    driver: bridge
+

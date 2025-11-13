@@ -1,0 +1,46 @@
+========================================
+COMANDOS PARA SUBIR BACKEND NO GITHUB
+========================================
+
+1. CRIAR REPOSITÓRIO NO GITHUB:
+   - Acesse: https://github.com/new
+   - Nome: vestcasa-backend
+   - Marque como PRIVADO
+   - NÃO marque README, .gitignore ou license
+   - Clique em "Create repository"
+   - COPIE A URL (exemplo: https://github.com/osseasofertas/vestcasa-backend.git)
+
+2. EXECUTAR NO POWERSHELL (na pasta backend):
+
+cd C:\Users\Romano\Desktop\personal-projects\vestcasa\backend
+
+git init
+
+git add .
+
+git commit -m "Initial commit: Backend NestJS para Clube Vestcasa"
+
+git remote add origin https://github.com/osseasofertas/vestcasa-backend.git
+
+git branch -M main
+
+git push -u origin main
+
+3. SE PEDIR AUTENTICAÇÃO:
+   - Use seu username: osseasofertas
+   - Use Personal Access Token como senha
+   - Para criar token: GitHub → Settings → Developer settings → Personal access tokens → Generate new token (classic) → Marque "repo"
+
+4. VERIFICAR:
+   - Acesse: https://github.com/osseasofertas/vestcasa-backend
+   - Confirme que os arquivos aparecem
+   - Confirme que está PRIVADO
+
+5. CONECTAR NA RAILWAY:
+   - Acesse: https://railway.app
+   - New Project → Deploy from GitHub repo
+   - Selecione: vestcasa-backend
+   - Deploy Now
+
+========================================
+
